@@ -2,13 +2,6 @@ import os
 import sys
 import subprocess
 from pathlib import Path
- 
-if __name__ == "__main__" and os.environ.get("ML4B_STREAMLIT_LAUNCHED") != "1":
-    env = os.environ.copy()
-    env["ML4B_STREAMLIT_LAUNCHED"] = "1"
-    script_path = Path(__file__).resolve()
-    subprocess.run([sys.executable, "-m", "streamlit", "run", str(script_path)], env=env)
-    sys.exit()
 
 import os
 import re
